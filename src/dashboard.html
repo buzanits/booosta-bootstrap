@@ -11,10 +11,14 @@
     <title>{%page_title}</title>
 
     {%html_head}
-
+    
+    <!-- Bootstrap core CSS -->
+    <link href="{%base_dir}vendor/twbs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="{%base_dir}vendor/booosta/bootstrap/src/dashboard.css" rel="stylesheet">
     <script type='text/javascript' src='{%base_dir}vendor/booosta/webapp/src/tools.js'></script>
+    <script src="{%base_dir}vendor/almasaeed2010/adminlte/plugins/jquery/jquery.min.js"></script>
+    <script src="{%base_dir}vendor/almasaeed2010/adminlte/plugins/jquery-ui/jquery-ui.min.js"></script>
 
 {%_includes}
   </head>
@@ -62,6 +66,7 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
+    <script src="{%base_dir}vendor/twbs/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="{%base_dir}vendor/booosta/bootstrap/src/dashboard.js"></script>
   </body>
 </html>

@@ -18,6 +18,6 @@
     "require": {
         "php": ">=8.0.0",
         "booosta/webapp": "dev-master",
-        "twbs/bootstrap": "^5.1"
+        "twbs/bootstrap": "3.3.7"
     }
 }

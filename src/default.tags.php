@@ -10,7 +10,7 @@ class TemplatemoduleTags extends Tags
     parent::__construct();
 
     $this->scripttags = [
-    
+        'BPANEL'  => null,
     ];
     
     $this->aliases = [
@@ -26,3 +26,20 @@ class TemplatemoduleTags extends Tags
     $this->merge($defaulttags);    
   }
 }
+
+
+namespace booosta\templateparser\tags\bootstrap;
+
+class bpanel extends \booosta\templateparser\Tag
+{
+  protected $html = '<div class="panel panel-default %class"><div class="panel-heading"><h3 class="panel-title">%ptitle</h3></div><div class="panel-body">';
+
+  protected function postcode()
+  {
+    if($this->extraattributes['paneltitle']) $this->html = str_replace("%ptitle", $this->extraattributes['paneltitle'], $this->html);
+    else $this->html = str_replace("%ptitle", '', $this->html);
+  }
+}
+
+class bselect extends \booosta\templateparser\tags\bselect1 {}
+
