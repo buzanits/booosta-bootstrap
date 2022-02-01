@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.png">
+
+    <title>{%page_title}</title>
+
+    {%html_head}
+
+    <!-- Custom styles for this template -->
+    <link href="{%base_dir}vendor/booosta/bootstrap/src/dashboard.css" rel="stylesheet">
+    <script type='text/javascript' src='{%base_dir}vendor/booosta/webapp/src/tools.js'></script>
+
+{%_includes}
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="{%home_link_}">{%site_name}</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+<!--
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Help</a></li>
+          </ul>
+-->
+##INCLUDE BOOSTAMENU##
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+<!--
+        <div class="col-sm-3 col-md-2 sidebar">
+## INCLUDE LEFT##
+        </div>
+-->
+        <div class="col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 main">
+{%_notifications}
+##INCLUDE MAIN##
+        </div>
+      </div>
+    </div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="{%base_dir}vendor/booosta/bootstrap/src/dashboard.js"></script>
+  </body>
+</html>
