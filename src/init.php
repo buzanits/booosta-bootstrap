@@ -5,13 +5,12 @@ namespace booosta\bootstrap;
 
 trait webapp
 {
-  protected $edit_pic_code = '<span class="glyphicon text-default glyphicon-pencil" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="edit"></span>';
-  protected $delete_pic_code = '<span class="glyphicon text-danger glyphicon-remove" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="delete"></span>';
-
-  protected function init_bootstrap()
+  protected function webappinit_bootstrap()
   {
-    $this->edit_pic_code = '<span class="glyphicon text-default glyphicon-pencil" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="edit"></span>';
-    $this->delete_pic_code = '<span class="glyphicon text-danger glyphicon-remove" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="delete"></span>';
+    if($this->config('template_module') == 'bootstrap'):
+      $this->edit_pic_code = '<span class="glyphicon text-default glyphicon-pencil" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="edit"></span>';
+      $this->delete_pic_code = '<span class="glyphicon text-danger glyphicon-remove" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="delete"></span>';
+    endif;
   }
   
   protected function preparse_bootstrap()
